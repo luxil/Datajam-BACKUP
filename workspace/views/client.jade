@@ -1,0 +1,17 @@
+html
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', type='text/css', href='./css/main.css')
+    script(src='https://code.jquery.com/jquery-1.12.1.min.js')
+    script(src='/socket.io/socket.io.js')
+    // <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+
+  body(onload='client()')
+    p Connected to 
+      div(id="nr") #{nummer}
+      p
+        button#start Start
+        button#stop Stop
+        button#speed Speed
+        button#pattern Pattern
+    script(type='text/javascript', src='./js/client.js')

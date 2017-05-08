@@ -1,0 +1,346 @@
+.noselect, .mpc-b, .controls, .pr-hist {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+/*
+.controls{
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 5px;
+    color: #fff;
+    background-color: #888;
+    font-size: 12px;
+    padding: 2 10 2 10;
+    cursor: default;
+}
+
+.desc{
+    height: 34px;
+    line-height: 34px;
+    float: left;
+    margin: 5 2 5 20;
+    font-family: sans-serif;
+    color: #777;
+}
+
+#bpm{
+    height: 34px;
+    margin: 5px;
+
+}
+*/
+.mpc-b:nth-of-type(3n+1){
+    clear: both;
+}
+
+.mpc-b:nth-of-type(4){
+    clear: both;
+}
+
+.mpc-b{
+    width:  80px;
+    height: 80px;
+    background-color: #bbb;
+    cursor: pointer;
+    float: left;
+    margin: 5px;
+    line-height: 80px;
+    color: #fff;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.mpc-b:hover{
+    background-color: #ccc;
+}
+
+
+/*        INTERFACE             */
+
+
+body,
+html {
+  position: fixed;
+}
+
+.interface{
+ position: absolute;   
+}
+
+.i-full{
+    z-index:50;
+}
+
+/*        LOGIN BUTTONS         */
+
+input#login-num {
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+}
+
+.login-bar{
+    width: 81vw;
+    margin-bottom: 5vh;
+    height: 7vh;
+    font-size: 15pt;
+    margin-left: 10vw;
+
+}
+
+#login-connect{
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    line-height: 7vh;
+    cursor: pointer;
+}
+
+.login-button:nth-of-type(3n-1) {
+    margin-left: 10vw;
+}
+
+.login-button {
+    width: 25vw;
+    background-color: #333;
+    color: #fff;
+    float: left;
+    height: 25vw;
+    margin: 1.5vw;
+    text-align: center;
+    font-size: 15pt;
+    line-height: 25vw;
+    cursor: pointer;
+}
+
+.login-button:active {
+    background-color: #777;
+}
+
+/*         INSTRUMENT SELECTION         */
+
+.instTitle {
+    text-align: center;
+    font-size: 18pt;
+    padding: 21px 0px;
+    color: #999;
+}
+
+.instSelect {
+    cursor: pointer;
+    width: 100%;
+    background-color: #ddd;
+    font-size: 15pt;
+    padding: 25px;
+    border-top: 2px solid #999;
+    text-transform: capitalize;
+}
+
+.instSelect:last-of-type {
+    border-bottom: 2px solid #999;
+}
+
+/*         NAVIGATION         */
+
+
+.nav-icon{
+    height: 100%;
+    width: 25%;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-right: 1px solid #555;
+    border-bottom: 1px solid #555;
+    /* background: #555; */
+    text-align: center;
+    font-size: 5vw;
+    line-height: 170px;
+    float: left;
+    text-transform: uppercase;
+    background-attachment: scroll;
+}
+
+.nav-icon:last-of-type {
+    border-right: 0px;
+}
+
+.nav-active{
+    filter: invert(100%) contrast(70%);
+    -webkit-filter: invert(100%) contrast(70%);
+    background-color: #FFFFFF !important;
+    border-bottom: 1px solid #ffffff;
+}
+
+.top-overlay {
+    z-index: 100;
+    position: absolute;
+    height: 85px;
+    color: #fff;
+    font-size: 7vw;
+    /* text-align: center; */
+    padding: 5%;
+    width: 100%;
+    background-color: rgba(60,60,60,0.9);
+}
+
+/*     PIANO ROLL         */
+
+#notes{
+    clear: both;
+    float: left;
+    margin-top: 50px;
+}
+
+#piano-roll, .pr{
+    position: absolute;
+    overflow-y: hidden;
+    /*right: 2px;*/
+    /*width: 350px;*/
+    /*height: 500px;*/
+    background-color: #efe6c3;
+}
+#piano-roll-2, .pr{
+    position: absolute;
+    overflow-y: hidden;
+    right: 2px;
+    width: 350px;
+    height: 500px;
+    background-color: #efe6c3;
+}
+
+.pr-note {
+    position: absolute;
+    cursor: pointer;
+    background-color: #aaa;
+    border-bottom: 1px solid #777;
+    border-left: 1px solid #777;
+/*    -webkit-box-shadow: inset 0px 0px 15px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 15px 2px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.3);*/
+}
+
+.pr-nb{
+    background-color: #999;
+}
+
+.pr-cc.pr-note{
+    background-color: #bbb;
+}
+
+.pr-cc.pr-nb{
+    background-color: #aaa;
+}
+
+.pr-active,.pr-cc.pr-active{
+    background-color: #fff;
+    z-index: 15;
+}
+
+.pr-current{
+    opacity: 0.6;
+}
+
+.pr-active.pr-current{
+    background-color: #eaa76a;
+}
+
+.pr-hist {
+    position: absolute;
+    padding-left: 10px;
+    font-family: sans-serif;
+    font-size: 10pt;
+    color:#000;
+    background-color: #fff;
+    z-index: 20;
+/*    -webkit-box-shadow: inset 0px 0px 15px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 15px 2px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,0.3);*/
+}
+
+.pr-hb{
+    background-color: #222;
+    color:#fff;
+/*    -webkit-box-shadow: inset -3px 0px 2px -1px rgba(208, 208, 208, 0.3);
+    -moz-box-shadow: inset -3px 0px 2px -1px rgba(208, 208, 208, 0.3);
+    box-shadow: inset -3px 0px 2px -1px rgba(208, 208, 208, 0.3);*/
+}
+
+#pr-container {
+    position: relative;
+    top: 0px;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: top 0.4s ease-out;
+    -moz-transition: top 0.4s ease-out;
+    -o-transition: top 0.4s ease-out;
+    -ms-transition: top 0.4s ease-out;
+    transition: top 0.4s ease-out;
+}
+
+.slider-wrapper{
+    float: left;
+    text-align: center;
+}
+
+.slider{
+    height: 200px;
+    width:200px;
+    background-color:#fff;
+    border-radius:50%;
+    border-color: #5a5a5a;
+    border-style: solid;
+}
+
+.sliderMark{
+    width: 10px;
+    height: 70px;
+    background-color: #5a5a5a;
+    margin-left: 95px;
+}
+
+/* PATTERNS  */
+
+.patternButton{
+    background-color: #ccc;
+    float:left;
+    font-size: 5vh;
+    text-align: center;
+    line-height: 8vh;
+    cursor: pointer;
+}
+
+.patternBorder {
+    height: 0.8vh;
+    width: 100%;
+    background: #b9b9b9;
+}
+
+.patternPlay {
+    height: 0;
+    /* padding-left: 5vw; */
+    margin-left: 42%;
+    margin-top: 1vh;
+    border-top: 2vh solid transparent;
+    border-bottom: 2vh solid transparent;
+    border-left: 3vh solid #5a5a5a;
+}
+
+.pB-active{
+    background: #b1b1b1;
+}
+
+.pB-active .patternPlay{
+    border-left-color: #eaa76a;
+}
+
+.pB-active .patternBorder{
+    background: #949494;
+}

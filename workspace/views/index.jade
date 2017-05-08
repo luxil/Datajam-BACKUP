@@ -1,0 +1,24 @@
+html
+  head
+    meta(charset='utf-8')
+    //link(rel='stylesheet', type='text/css', href='./css/main.css')
+    //Wenn das Gerät einen großen Bildschirm hat
+    //link(rel='stylesheet', type='text/css',  media="screen and (min-device-width: 1000px)", href='./css/start.css')
+    //Wenn das Gerät einen kleinen Bildschirm hat
+    ///////////
+    //////////
+    link(rel='stylesheet', type='text/css', href='./css/start.css')
+    script(src='https://code.jquery.com/jquery-1.12.1.min.js')
+    script(src='/socket.io/socket.io.js')
+    // <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  body
+    p
+      a(class='btn', href='/a') Admin  
+    p
+      a(class='btn', href='/p') Statischer Host    
+    p
+      a(class='btn', href='/c') Statischer Client
+    p
+      a(class='btn', href='/test') Testbereich, WIP
+    img(src='img/close.png')
+

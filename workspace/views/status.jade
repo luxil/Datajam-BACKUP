@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        //"richtig"
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Connect Client
+        link(href='https://fonts.googleapis.com/css?family=Questrial',rel='stylesheet',type='text/css')
+        link(rel='stylesheet', href='css/status.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js')
+        script(src='//code.jquery.com/ui/1.11.4/jquery-ui.js')
+        script(src='js/status.js')
+        script(src='/socket.io/socket.io.js')
+        script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+    body(onload='status()')
+        .container
+            #status.status

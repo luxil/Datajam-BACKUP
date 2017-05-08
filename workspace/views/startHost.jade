@@ -1,0 +1,71 @@
+doctype html
+html
+    head
+        //"richtig"
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Connect Client
+        //link(rel='stylesheet', href='css/main.css')
+        // Bootstrap
+        //link(href='css/bootstrap1.min.css', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Questrial',rel='stylesheet',type='text/css')
+        link(rel='stylesheet', href='css/startHost.css')
+        script(src='https://code.jquery.com/jquery-3.1.0.min.js')
+        script(src='//code.jquery.com/ui/1.11.4/jquery-ui.js')
+        // load order: device - startHost - main
+        script(type='text/javascript', src='./js/deviceTestByron.js')
+        script(src='js/startHost.js')
+        script(type='text/javascript', src='./js/mainTestByron.js')
+        script(src='/socket.io/socket.io.js')
+        script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+
+        script(src='js/bootstrap1.min.js')
+
+    body(onload='startHost()')
+        #notConnected.container
+            //h1 Welcome to DataJam
+            
+            img.logo-start(src="../img/logo-start.png") 
+            
+            p Open the site on your mobile device to create music
+            p(class='id')#id
+        #connected.container(style="display:none")
+            header 
+                img.logo(src="../img/logo.png")
+                .playbutton#playbutton
+                    .play-icon
+                    .stop-icon
+                #tempo
+                    //#start.controls Start
+                    //#stop.controls Stop
+                    .desc Tempo
+                    input#bpm(type='number', min='0', max='300', value='120')
+                //#counter-wrapper
+                    #counter  0
+                    #quarters 0
+                //    #intf
+                //    #steps
+                .server_nr RoomID:
+                    #server_nr
+                #tick-viewer    
+                br
+            #userListHost
+                //tbody
+            .testHost
+                //h2 HostR
+                //div 
+                    //#counter  0
+                    //#quarters 0
+                    //#start.controls Start
+                    //#stop.controls Stop
+                    //.desc Tempo
+                    //input#bpm(type='number', min='0', max='300', value='120')
+                    //#intf
+                    //#steps
+                    //#notes
+                    //#addUserHost.testbtn addU
+                    //#deleteUserHost.testbtn deleteI_1
+                    //#changePlayStop.testbtn Pl_or_St
+                    //#newTable.testbtn newTable
+                

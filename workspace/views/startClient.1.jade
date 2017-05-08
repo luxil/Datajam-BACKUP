@@ -1,0 +1,70 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Connect Client
+        link(rel='stylesheet', type='text/css', href='./css/main.css')
+        link(rel='stylesheet', href='css/startClient.css')
+        // Bootstrap
+        link(href='css/bootstrap1.min.css', rel='stylesheet')
+        script(src='https://code.jquery.com/jquery-1.12.1.min.js')
+        //script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js')
+        script(src='//code.jquery.com/ui/1.11.4/jquery-ui.js')
+        script(src='js/bootstrap1.min.js')
+        script(type='text/javascript', src='./js/viewerTestByron.js')
+        script(src='js/startClient.js')
+        script(src='/socket.io/socket.io.js')
+        script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+
+    body(onload='startClient()')
+    #interface
+        #connectSection.container-fluid
+            .row
+                #topBar
+                    .col-lg-3
+                    .col-xs-12.col-lg-7
+                        input#id(type='text',placeholder="Screen ID eingeben.")
+                        button#connect(type='submit') Verbinden
+                    .col-lg-3
+        #inputSection.container-fluid
+            .row
+                #contentBar
+                    .col-lg-3
+                    .col-xs-12.col-lg-7
+                        .row
+                            .col-lg-4.col-xs-4
+                                #1.block 1
+                            .col-lg-4.col-xs-4
+                                #2.block 2
+                            .col-lg-4.col-xs-4
+                                #3.block 3
+                        .row
+                            .col-lg-4.col-xs-4
+                                #4.block 4
+                            .col-lg-4.col-xs-4
+                                #5.block 5
+                            .col-lg-4.col-xs-4
+                                #6.block 6
+                        .row
+                            .col-lg-4.col-xs-4
+                                #7.block 7
+                            .col-lg-4.col-xs-4
+                                #8.block 8
+                            .col-lg-4.col-xs-4
+                                #9.block 9
+                        .row
+                            .col-lg-4.col-xs-4
+                                #c.block Clear
+                            .col-lg-4.col-xs-4
+                                #0.block 0
+                            .col-lg-4.col-xs-4
+                                #call.block Clear all
+        #pickInstrument.container(style="display:none")
+        #instrument0.container(style="display:none")
+            #piano-roll
+        #instrument1.container(style="display:none")
+            #piano-roll-2
+        #instrument2.container(style="display:none")
+        #instrument3.container(style="display:none")

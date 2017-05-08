@@ -1,0 +1,21 @@
+html
+  head
+    meta(charset='utf-8')
+    link(rel='stylesheet', type='text/css', href='./css/main.css')
+    // <script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+    script(src='https://code.jquery.com/jquery-1.12.1.min.js')
+    script(type='text/javascript', src='./js/main.js')
+    script(type='text/javascript', src='./js/device.js')
+    script(type='text/javascript', src='./js/viewer.js')
+  body
+    div Web Audio Test
+    #counter  0
+    #quarters 0
+    #start.controls Start
+    #stop.controls Stop
+    .desc Tempo
+    input#bpm(type='number', min='0', max='300', value='120')
+    #intf
+    #steps
+    #notes
+    #piano-roll

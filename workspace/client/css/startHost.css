@@ -1,0 +1,286 @@
+body {
+    font-family: Questrial, sans-serif;
+    background-color: #c4ded3;
+    -webkit-box-shadow: inset 0px 0px 20vw 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: inset 0px 0px 20vw 0px rgba(0,0,0,0.45);
+    box-shadow: inset 0px 0px 20vw 0px rgba(0,0,0,0.45);
+    
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    left: 0;
+    margin: 0;
+}
+
+.noselect, .mpc-b, .controls, .pr-hist {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* IE/Edge */
+    user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+#notConnected {
+    margin-top: 20vh;
+    text-align: center;
+}
+
+
+
+p {
+    color: black;
+    font-weight: bold;
+    font-size: 4vmin;
+    text-align: center;
+    
+}
+
+p.id{
+    margin-top: 3vmin;
+}
+
+
+h1{
+    color: black;
+    font-weight: bold;
+    font-size: 7vmin;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 1vh;
+    margin-bottom: 8vh;
+    border-bottom: 0.7vh solid #000;
+}
+h2{
+    position: relative;
+}
+
+.controls{
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 5px;
+    color: #fff;
+
+    background-color: #888;
+    font-size: 12px;
+    padding: 2 10 2 10;
+    cursor: default;
+}
+.controls:active{
+    background-color: #444;
+}
+
+#tempo{
+    float: left;
+    text-align: center;
+    margin-left: 4vh;
+}
+
+.desc{
+     line-height: 9vh;
+    /* margin-left: 0vh; */
+    font-family: sans-serif;
+    color: #555;
+    font-size: 3.5vh;
+    border-bottom: 2px solid #6b6b6b;
+    /* background: #b9b9b9; */
+}
+
+#bpm{
+    height: 7vh;
+    margin-left: 16px;
+    font-size: 3.5vh;
+    float: left;
+    font-family: Questrial, sans-serif;
+    text-align: center;
+    background: rgba(255,255,255,0);
+    border: 0px;
+    color: #333;
+}
+
+header{
+    /* position: relative; */
+    /* text-align: center; */
+    width: 70%;
+    position: relative;
+    margin-top: 2vh;
+    margin-left: 15%;
+    background: #bbb;
+    height: 20vh;
+}
+
+.playbutton{
+    /*position: absolute;
+    top: 0px;
+    left: 38vw;
+    background-image:url('../img/StopbuttonWebaudio.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center;
+    width: 25vw;
+    height: 25vh;
+    cursor: default;*/
+    width: 20vh;
+    height: 20vh;
+    float: left;
+    background: #ccc;
+    
+}
+
+.play-icon {
+    margin: 3vh 4vh;
+    border-top: 7vh solid transparent;
+    border-bottom: 7vh solid transparent;
+    border-left: 12vh solid #5a5a5a;
+}
+
+.stop-icon {
+    margin: 4vh 4vh;
+    height: 12vh;
+    width: 12vh;
+    background: #5a5a5a;
+    display:none;
+}    
+
+.logo{
+    height: 20vh;
+    float: left;
+    width: auto;
+}
+
+.logo-start {
+    height: 25vh;
+    width:auto;
+}
+
+
+.server_nr {
+    /* position: absolute; */
+    /* top: 0px; */
+    /* right: 0px; */
+    /*font-family: sans-serif;*/
+    font-size: 3.5vh;
+    float: right;
+    margin-right: 6vh;
+    margin-top: 4vh;
+    line-height: 4vh;
+    text-align: center;
+    color: #444;
+}
+
+#tick-viewer {
+    float: left;
+    clear: both;
+    width: 100%;
+    background: #bbb;
+}
+
+.tick-box:first-of-type {
+    margin-left: 0%;
+}
+
+.tick-box {
+    background: #949494;
+    height: 1vh;
+    width: 6%;
+    float: left;
+    margin-left: 0.26%;
+}
+
+.tick-active{
+    background:#eaa76a;
+}
+
+.testHost{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.testbtn{
+    float: left;
+    line-height: 30px;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 5px;
+    color: #fff;
+
+    background-color: #888;
+    font-size: 12px;
+    padding: 2 10 2 10;
+    cursor: default;
+}
+
+table{
+    border-spacing: 0;
+}
+th, tr {
+   border: 1px solid #c1b6b6;
+   height: 10vh;
+}
+
+td{
+    position: relative;
+}
+
+#userListHost{
+    position:absolute;
+    top: 30vh;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+/*
+img{
+    height: 10vmin;
+}
+
+.prHost-hist, .prHost{
+        float: left;
+    height: 10vh;
+    width: 5.76%;
+    font-family: sans-serif;
+    font-size: 10pt;
+    color: #000;
+    background-color: #fff;
+    border-left: 1px solid;
+}
+
+.prHostContainer{
+    float:left;
+    width:100%;
+}
+
+
+.instrumentth{
+    width: 15%;
+}
+*/
+.user-instrument {
+    text-transform: uppercase;
+    padding-left: 3vw;
+    /*font-family: sans-serif;*/
+    float: left;
+    width: 10vw;
+}
+
+.user-icon {
+    float: left;
+    width: auto;
+}
+
+.user-analyser {
+    position: absolute;
+    right: 4vw;
+    margin-top: -2vh;
+    border-bottom: 2px solid #fff;
+}
